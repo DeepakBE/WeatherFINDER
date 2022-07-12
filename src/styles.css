@@ -1,0 +1,95 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+.raleway-100 {
+    font-weight: 100;
+}
+
+.raleway-200 {
+    font-weight: 200;
+}
+
+.raleway-300 {
+    font-weight: 300;
+}
+
+.raleway-400 {
+    font-weight: 400;
+}
+
+.raleway-500 {
+    font-weight: 500;
+}
+
+.raleway-600 {
+    font-weight: 600;
+}
+
+.raleway-700 {
+    font-weight: 700;
+}
+
+.raleway-800 {
+    font-weight: 800;
+}
+
+.brand {
+    font-size: 25px;
+}
+
+.main-deg {
+    font-size: 70px;
+    -webkit-text-stroke: 1px #000;
+    -webkit-text-fill-color: #fff;
+}
+
+.cold {
+    background-image: url("https://images.pexels.com/photos/897014/pexels-photo-897014.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.summer {
+    background-image: url("https://images.pexels.com/photos/1237119/pexels-photo-1237119.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.search input {
+    background-color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    padding: 1em 3em;
+    color: #000;
+    font-size: 0.8em;
+    font-weight: 700;
+    text-align: center;
+}
+
+.box-sha {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.button {
+    padding: 5px 40px;
+    text-decoration: none;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    background: rgba(0, 0, 0, 0.1);
+    transition: all 0.5s;
+}
+
+.button:hover {
+    color: #fff;
+    border: 1px solid #fff;
+}

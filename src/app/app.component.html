@@ -1,0 +1,87 @@
+<div *ngIf="weatherDatas">
+    <div class="text-secondary text-center " [class.cold]="weatherDatas.main.temp<18" [class.summer]="weatherDatas.main.temp>=18">
+
+        <!-- <nav class="navbar container pb-5">
+            <div class="container-fluid">
+                <a class="navbar-brand brand raleway-700 " [class.text-white]="weatherDatas.main.temp>=18" href="#">WeatherAPI</a>
+            </div>
+        </nav> -->
+
+
+        <nav class="navbar navbar-expand-lg pb-5">
+            <div class="container">
+                <a class="navbar-brand brand raleway-700" [class.text-white]="weatherDatas.main.temp>=18" href="#">WeatherAPI</a>
+                <button class="navbar-toggler" type="button" (click)="collapse.toggle()" [attr.aria-expanded]="!isCollapsed">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    </ul>
+                    <div class="d-flex">
+                        <button class="button" type="submit" onclick="window.open('../assets/Deepak.docx')">RESUME</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+
+
+        <form class="search" #form="ngForm" (submit)="onSubmit()">
+            <input type="text" placeholder="search city..." name="city" [(ngModel)]="cityName">
+        </form>
+
+        <!-- WEATHER API -->
+        <div class="py-md-5">
+            <h1 class="main-deg fw-bold text-white">
+                {{weatherDatas.main.temp | number :'1.0-0'}}°C</h1>
+            <div class="col-lg-6 mx-auto">
+                <p class="fs-5 mb-4 city-name text-white raleway-600">
+                    {{weatherDatas.name}}
+                </p>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <p class="py-2 text-dark fw-bold raleway-600"> More Informations</p>
+
+            <div class="row justify-content-md-center">
+                <div class="col-md-3 box-sha p-md-5 p-4">
+                    <table class="table text-white">
+                        <tbody>
+                            <tr>
+                                <th scope="row">Cold</th>
+                                <td>{{weatherDatas.main.temp_min}} °C</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Hot</th>
+                                <td>{{weatherDatas.main.temp_max}} °C</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Humidity</th>
+                                <td>{{weatherDatas.main.humidity}} %</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Wind</th>
+                                <td>{{weatherDatas.wind.speed}} Km/h</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Country</th>
+                                <td>{{weatherDatas.sys.country}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
